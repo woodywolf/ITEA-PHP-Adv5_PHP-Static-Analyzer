@@ -1,6 +1,13 @@
 #!/usr/bin/env php
 <?php
 
+use Greeflas\StaticAnalyzer\Command\ClassAuthorStat;
+use Symfony\Component\Console\Application;
+
 require_once __DIR__ . '/../vendor/autoload.php';
 
+$application = new Application('PHP Static Analyzer', '1.0.0-alpha');
 
+$application->add(new ClassAuthorStat());
+
+$application->run();

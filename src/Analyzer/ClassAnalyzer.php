@@ -24,7 +24,6 @@ namespace Greeflas\StaticAnalyzer\Analyzer;
  *     private: {{count}}
  *
  */
-
 class ClassAnalyzer
 {
     private $className;
@@ -36,7 +35,7 @@ class ClassAnalyzer
 
 
 
-    public function analyze() :array
+    public function analyze(): array
     {
         $reflector = new \ReflectionClass($this->className);
         $reflection = new \Reflection();
@@ -46,8 +45,7 @@ class ClassAnalyzer
         $classArray['class name'] = $reflector->getShortName();
         $classArray['class type'] = $reflection::getModifierNames($reflector->getModifiers());
 
-        if(empty($classArray['class type'][0]))
-        {
+        if (empty($classArray['class type'][0])) {
             $classArray['class type'][0] = 'normal';
         }
 
@@ -56,7 +54,7 @@ class ClassAnalyzer
         return [$classArray,$array];
     }
 
-    public function count(\ReflectionClass $reflector) : array
+    public function count(\ReflectionClass $reflector): array
     {
         $properties = $reflector->getProperties();
         $methods = $reflector->getMethods();

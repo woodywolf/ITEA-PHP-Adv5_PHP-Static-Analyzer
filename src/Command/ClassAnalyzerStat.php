@@ -24,9 +24,8 @@ use Symfony\Component\Console\Output\OutputInterface;
  * Example of usage
  * ./bin/console stat:class-analyzer 'Greeflas\StaticAnalyzer\Analyzer\ClassAuthor'
  *
- * 
+ *
  */
-
 class ClassAnalyzerStat extends Command
 {
     protected function configure()

@@ -14,6 +14,18 @@ Usage
 `$ ./bin/console stat:class-author <email> <project-src>` - counts classes/interfaces/trait
 created by some developer in project.
 
+`$ ./bin/console stat:class-analyzer <full-class-name>` - this command shows class information in format
+
+Class: {{class_name}} is {{class_type}}  
+Properties:  
+&nbsp;&nbsp;&nbsp;&nbsp; public: {{count}}  
+&nbsp;&nbsp;&nbsp;&nbsp; protected: {{count}}  
+&nbsp;&nbsp;&nbsp;&nbsp; private: {{count}}  
+Methods:  
+&nbsp;&nbsp;&nbsp;&nbsp; public: {{count}}  
+&nbsp;&nbsp;&nbsp;&nbsp; protected: {{count}}  
+&nbsp;&nbsp;&nbsp;&nbsp; private: {{count}}
+
 Code style fixer
 ----------------
 

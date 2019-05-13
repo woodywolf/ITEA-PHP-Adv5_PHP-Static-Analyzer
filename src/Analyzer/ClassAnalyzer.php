@@ -11,6 +11,20 @@
 
 namespace Greeflas\StaticAnalyzer\Analyzer;
 
+/**
+ * Shows class information in format:
+ * Class: {{class_name}} is {{class_type}}
+ * Properties:
+ *     public: {{count}}
+ *     protected: {{count}}
+ *     private: {{count}}
+ * Methods:
+ *     public: {{count}}
+ *     protected: {{count}}
+ *     private: {{count}}
+ *
+ */
+
 class ClassAnalyzer
 {
     private $className;
@@ -38,7 +52,7 @@ class ClassAnalyzer
         return $finalArray = [$classArray,$array];
     }
 
-    public function count($reflector)
+    public function count(\ReflectionClass $reflector) : array
     {
         $properties = $reflector->getProperties();
         $methods = $reflector->getMethods();

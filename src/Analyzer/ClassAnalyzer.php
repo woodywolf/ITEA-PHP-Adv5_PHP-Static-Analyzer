@@ -36,7 +36,7 @@ class ClassAnalyzer
 
 
 
-    public function analyze()
+    public function analyze() :array
     {
         $reflector = new \ReflectionClass($this->className);
         $reflection = new \Reflection();

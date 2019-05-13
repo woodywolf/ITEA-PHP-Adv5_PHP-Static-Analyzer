@@ -57,14 +57,16 @@ class ClassAnalyzer
         $properties = $reflector->getProperties();
         $methods = $reflector->getMethods();
 
-        $array = ['Properties'=>
-            ['public' => 0,
+        $array = [
+            'Properties'=> [
+                'public' => 0,
                 'protected'=> 0,
+                'private' => 0,
+            ],
+            'Methods' => [
+                'public' => 0,
+                'protected' => 0,
                 'private' => 0, ],
-            'Methods' =>
-                ['public' => 0,
-                    'protected' => 0,
-                    'private' => 0, ],
         ];
 
 

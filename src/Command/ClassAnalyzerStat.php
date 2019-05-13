@@ -17,6 +17,16 @@ use Symfony\Component\Console\Input\InputArgument;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
 
+/**
+ * Command for getting information about classes: name of the class,
+ * type of the class, number of properties and methods
+ *
+ * Example of usage
+ * ./bin/console stat:class-analyzer 'Greeflas\StaticAnalyzer\Analyzer\ClassAuthor'
+ *
+ * 
+ */
+
 class ClassAnalyzerStat extends Command
 {
     protected function configure()

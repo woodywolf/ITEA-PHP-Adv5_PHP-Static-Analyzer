@@ -41,11 +41,15 @@ class ClassAnalyzer
         $reflector = new \ReflectionClass($this->className);
         $reflection = new \Reflection();
 
-        $classArray = [];
+
 
         $classArray['class name'] = $reflector->getShortName();
         $classArray['class type'] = $reflection::getModifierNames($reflector->getModifiers());
 
+        if(empty($classArray['class type'][0]))
+        {
+            $classArray['class type'][0] = 'normal';
+        }
 
         $array = $this->count($reflector);
 

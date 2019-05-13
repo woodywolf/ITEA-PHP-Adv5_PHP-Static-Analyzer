@@ -49,7 +49,7 @@ class ClassAnalyzer
 
         $array = $this->count($reflector);
 
-        return $finalArray = [$classArray,$array];
+        return [$classArray,$array];
     }
 
     public function count(\ReflectionClass $reflector) : array
